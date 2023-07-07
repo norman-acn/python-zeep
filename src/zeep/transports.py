@@ -118,7 +118,7 @@ class Transport:
             if self.cache:
                 response = self.cache.get(url)
                 if response:
-                    return bytes(response)
+                    return bytes(response, encoding='utf-8')
 
             content = self._load_remote_data(url)
 
