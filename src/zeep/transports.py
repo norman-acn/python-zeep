@@ -116,6 +116,9 @@ class Transport:
         if scheme in ("http", "https", "file"):
 
             if self.cache:
+                print(type(self.cache))
+                print(url)
+                print(dir(self.cache))
                 response = self.cache.get(url)
                 if response:
                     return bytes(response, encoding='utf-8')
